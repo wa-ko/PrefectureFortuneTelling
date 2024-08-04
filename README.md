@@ -1,1 +1,6 @@
-# PrefectureFortuneTelling
+# 株式会社ゆめみ iOS 未経験者エンジニア向けコードチェック課題
+
+## 環境
+- IDE：Xcode 15.4.0
+- Swift：Swift 5.10
+- 開発ターゲット：iOS 17.5
