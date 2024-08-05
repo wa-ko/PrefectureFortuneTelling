@@ -1,12 +1,12 @@
 //
-//  HTTPBody.swift
+//  FortuneRequest.swift
 //  PrefectureFortuneTelling
 //
 //  Created by 若生優希 on 2024/08/04.
 //
 
 
-struct HTTPBody: Codable {
+struct FortuneRequest: Codable {
     var name: String
     var birthday: YearMonthDay
     var bloodType: String
