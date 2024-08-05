@@ -11,6 +11,8 @@
 		5265EDE72C5F7CA600879508 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDE62C5F7CA600879508 /* ContentView.swift */; };
 		5265EDE92C5F7CA700879508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5265EDE82C5F7CA700879508 /* Assets.xcassets */; };
 		5265EDED2C5F7CA700879508 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5265EDEC2C5F7CA700879508 /* Preview Assets.xcassets */; };
+		5265EDF62C5FC8E400879508 /* HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDF52C5FC8E400879508 /* HTTPBody.swift */; };
+		5265EDF82C60537C00879508 /* ResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDF72C60537C00879508 /* ResponseBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		5265EDE82C5F7CA700879508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5265EDEA2C5F7CA700879508 /* PrefectureFortuneTelling.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrefectureFortuneTelling.entitlements; sourceTree = "<group>"; };
 		5265EDEC2C5F7CA700879508 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5265EDF52C5FC8E400879508 /* HTTPBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
+		5265EDF72C60537C00879508 /* ResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			children = (
 				5265EDE42C5F7CA600879508 /* PrefectureFortuneTellingApp.swift */,
 				5265EDE62C5F7CA600879508 /* ContentView.swift */,
+				5265EDF42C5FC7A000879508 /* Model */,
 				5265EDE82C5F7CA700879508 /* Assets.xcassets */,
 				5265EDEA2C5F7CA700879508 /* PrefectureFortuneTelling.entitlements */,
 				5265EDEB2C5F7CA700879508 /* Preview Content */,
@@ -67,6 +72,15 @@
 				5265EDEC2C5F7CA700879508 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5265EDF42C5FC7A000879508 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5265EDF52C5FC8E400879508 /* HTTPBody.swift */,
+				5265EDF72C60537C00879508 /* ResponseBody.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5265EDF62C5FC8E400879508 /* HTTPBody.swift in Sources */,
 				5265EDE72C5F7CA600879508 /* ContentView.swift in Sources */,
+				5265EDF82C60537C00879508 /* ResponseBody.swift in Sources */,
 				5265EDE52C5F7CA600879508 /* PrefectureFortuneTellingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
