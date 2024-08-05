@@ -60,7 +60,6 @@
 			children = (
 				5265EDE42C5F7CA600879508 /* PrefectureFortuneTellingApp.swift */,
 				5265EDE62C5F7CA600879508 /* ContentView.swift */,
-				5265EDF92C605FAB00879508 /* API */,
 				5265EDF42C5FC7A000879508 /* Models */,
 				5265EDE82C5F7CA700879508 /* Assets.xcassets */,
 				5265EDEA2C5F7CA700879508 /* PrefectureFortuneTelling.entitlements */,
@@ -85,13 +84,6 @@
 				5265EDFA2C60612C00879508 /* API.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		5265EDF92C605FAB00879508 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
