@@ -11,8 +11,8 @@ class API {
     let baseURL = "https://yumemi-ios-junior-engineer-codecheck.app.swift.cloud"
     let endpoint = "/my_fortune"
     
-    func fetchPrefecture(request: FortuneRequest) {
-        let url = URL(string: baseURL + endpoint)!
+    func fetchPrefecture(request: FortuneRequest, completion: @escaping (Result<FortuneResponse, Error>) -> Void) {
+        guard let url = URL(string: baseURL + endpoint) else { return }
         var urlRequest = URLRequest(url: url)
         
         urlRequest.httpMethod = "POST"
@@ -22,20 +22,22 @@ class API {
         do {
             let jsonData = try encoder.encode(request)
         } catch {
+            completion(.failure(error))
             return
         }
         
         let task = URLSession.shared.dataTask(with: urlRequest) { data, responce, error in
             if let error {
+                completion(.failure(error))
                 return
             }
-            guard let data else{
-                return
-            }
+            guard let data else { return }
             let decoder = JSONDecoder()
             do {
-                let responseBody = try decoder.decode(FortuneResponse.self, from: data)
+                let fortuneResponse = try decoder.decode(FortuneResponse.self, from: data)
+                completion(.success(fortuneResponse))
             } catch {
+                completion(.failure(error))
                 return
             }
         }
