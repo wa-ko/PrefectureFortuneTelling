@@ -11,7 +11,7 @@ class API {
     let baseURL = "https://yumemi-ios-junior-engineer-codecheck.app.swift.cloud"
     let endpoint = "/my_fortune"
     
-    func fetchPrefecture(request: HTTPBody) {
+    func fetchPrefecture(request: FortuneRequest) {
         let url = URL(string: baseURL + endpoint)!
         var urlRequest = URLRequest(url: url)
         
@@ -34,7 +34,7 @@ class API {
             }
             let decoder = JSONDecoder()
             do {
-                let responseBody = try decoder.decode(HTTPBody.self, from: data)
+                let responseBody = try decoder.decode(FortuneResponse.self, from: data)
             } catch {
                 return
             }

@@ -1,12 +1,12 @@
 //
-//  ResponseBody.swift
+//  FortuneResponse.swift
 //  PrefectureFortuneTelling
 //
 //  Created by 若生優希 on 2024/08/05.
 //
 
 
-struct ResponceBody: Codable {
+struct FortuneResponse: Codable {
     var name: String
     var capital: String
     var citizenDay: MonthDay?
