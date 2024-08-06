@@ -11,7 +11,7 @@ class API {
     let baseURL = "https://yumemi-ios-junior-engineer-codecheck.app.swift.cloud"
     let endpoint = "/my_fortune"
     
-    func fetchPrefecture(request: FortuneRequest, completion: @escaping (Result<FortuneResponse, Error>) -> Void) {
+    func fetchFortune(request: FortuneRequest, completion: @escaping (Result<FortuneResponse, Error>) -> Void) {
         guard let url = URL(string: baseURL + endpoint) else { return }
         var urlRequest = URLRequest(url: url)
         

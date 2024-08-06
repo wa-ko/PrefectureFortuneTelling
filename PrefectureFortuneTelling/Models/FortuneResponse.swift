@@ -11,7 +11,7 @@ struct FortuneResponse: Codable {
     var capital: String
     var citizenDay: MonthDay?
     var hasCoastLine: Bool
-    var logoUrl: String
+    var logoURL: String
     var brief: String
 }
 

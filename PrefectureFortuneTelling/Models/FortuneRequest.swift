@@ -15,6 +15,6 @@ struct FortuneRequest: Codable {
 
 struct YearMonthDay: Codable {
     var year: Int
-    var mounth: Int
+    var month: Int
     var day: Int
 }
