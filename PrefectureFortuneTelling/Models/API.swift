@@ -11,16 +11,21 @@ class API {
     let baseURL = "https://yumemi-ios-junior-engineer-codecheck.app.swift.cloud"
     let endpoint = "/my_fortune"
     
-    func fetchPrefecture(request: FortuneRequest, completion: @escaping (Result<FortuneResponse, Error>) -> Void) {
-        guard let url = URL(string: baseURL + endpoint) else { return }
+    func fetchFortune(request: FortuneRequest, completion: @escaping (Result<FortuneResponse, Error>) -> Void) {
+        guard let url = URL(string: baseURL + endpoint) else {
+            print("Invalid URL")
+            return
+        }
         var urlRequest = URLRequest(url: url)
         
         urlRequest.httpMethod = "POST"
-        urlRequest.addValue("v1", forHTTPHeaderField: "API-Version")
-        
+        urlRequest.setValue("v1", forHTTPHeaderField: "API-Version")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
         let encoder = JSONEncoder()
         do {
             let jsonData = try encoder.encode(request)
+            urlRequest.httpBody = jsonData
         } catch {
             completion(.failure(error))
             return
@@ -31,7 +36,10 @@ class API {
                 completion(.failure(error))
                 return
             }
-            guard let data else { return }
+            guard let data else {
+                print("No data received")
+                return
+            }
             let decoder = JSONDecoder()
             do {
                 let fortuneResponse = try decoder.decode(FortuneResponse.self, from: data)
