@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var name = ""
-    @State private var year = 2000
+    @State private var year = 2_000
     @State private var month = 1
     @State private var day = 1
     @State private var bloodType = ""
     @State private var fortuneResponse: FortuneResponse?
-    
+
     var body: some View {
         VStack {
             TextField("Name", text: $name)
@@ -24,9 +24,9 @@ struct ContentView: View {
             TextField("Blood Type", text: $bloodType)
             Button("Get Fortune") {
                 let birthday = YearMonthDay(year: year, month: month, day: day)
-                let today = YearMonthDay(year: 2023, month: 5, day: 5)
+                let today = YearMonthDay(year: 2_023, month: 5, day: 5)
                 let request = FortuneRequest(name: name, birthday: birthday, bloodType: bloodType, today: today)
-                
+
                 API().fetchFortune(request: request) { result in
                     switch result {
                     case .success(let response):

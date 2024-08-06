@@ -5,7 +5,6 @@
 //  Created by 若生優希 on 2024/08/05.
 //
 
-
 struct FortuneResponse: Codable {
     var name: String
     var capital: String
@@ -13,7 +12,7 @@ struct FortuneResponse: Codable {
     var hasCoastLine: Bool
     var logoURL: String
     var brief: String
-    
+
     enum CodingKeys: String, CodingKey {
         case name
         case capital
