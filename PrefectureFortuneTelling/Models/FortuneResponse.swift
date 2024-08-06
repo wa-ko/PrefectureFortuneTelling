@@ -13,6 +13,15 @@ struct FortuneResponse: Codable {
     var hasCoastLine: Bool
     var logoURL: String
     var brief: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case capital
+        case citizenDay = "citizen_day"
+        case hasCoastLine = "has_coast_line"
+        case logoURL = "logo_url"
+        case brief
+    }
 }
 
 struct MonthDay: Codable {

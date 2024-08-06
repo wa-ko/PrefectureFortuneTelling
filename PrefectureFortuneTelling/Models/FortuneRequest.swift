@@ -11,6 +11,13 @@ struct FortuneRequest: Codable {
     var birthday: YearMonthDay
     var bloodType: String
     var today: YearMonthDay
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case birthday
+        case bloodType = "blood_type"
+        case today
+    }
 }
 
 struct YearMonthDay: Codable {
