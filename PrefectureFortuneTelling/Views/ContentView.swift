@@ -16,7 +16,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
                 Group {
                     HStack {
                         Text("名前:")
@@ -41,7 +41,9 @@ struct ContentView: View {
                     }
                 }
                 .padding(.vertical, 5)
-
+                
+                Spacer()
+                
                 Button(action: {
                     let components = Calendar.current.dateComponents([.year, .month, .day], from: birthday)
                     let birthday = YearMonthDay(year: components.year ?? 2_000, month: components.month ?? 1, day: components.day ?? 1)
