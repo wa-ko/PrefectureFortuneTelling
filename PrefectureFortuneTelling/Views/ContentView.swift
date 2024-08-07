@@ -41,16 +41,11 @@ struct ContentView: View {
                     }
                 }
                 .padding(.vertical, 5)
-                
+
                 Spacer()
-                
+
                 Button(action: {
-                    let components = Calendar.current.dateComponents([.year, .month, .day], from: birthday)
-                    let birthday = YearMonthDay(year: components.year ?? 2_000, month: components.month ?? 1, day: components.day ?? 1)
-                    let today = YearMonthDay(year: Calendar.current.component(.year, from: Date()),
-                                             month: Calendar.current.component(.month, from: Date()),
-                                             day: Calendar.current.component(.day, from: Date()))
-                    let request = FortuneRequest(name: name, birthday: birthday, bloodType: bloodType, today: today)
+                    let request = setComponents(birthday: birthday, bloodType: bloodType)
 
                     API().fetchFortune(request: request) { result in
                         switch result {
@@ -63,6 +58,7 @@ struct ContentView: View {
                             print(error.localizedDescription)
                         }
                     }
+
                 }) {
                     Text("占う")
                         .foregroundColor(.white)
@@ -73,6 +69,7 @@ struct ContentView: View {
                 .padding(.vertical)
 
                 Spacer()
+
             }
             .padding()
             .navigationTitle("相性の良い都道府県占い")
@@ -80,6 +77,15 @@ struct ContentView: View {
                 ResultView(name: $name, fortuneResponse: $fortuneResponse)
             }
         }
+    }
+
+    private func setComponents(birthday: Date, bloodType: String) -> FortuneRequest {
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: birthday)
+        let birthday = YearMonthDay(year: components.year ?? 2_000, month: components.month ?? 1, day: components.day ?? 1)
+        let today = YearMonthDay(year: Calendar.current.component(.year, from: Date()),
+                                 month: Calendar.current.component(.month, from: Date()),
+                                 day: Calendar.current.component(.day, from: Date()))
+        return FortuneRequest(name: name, birthday: birthday, bloodType: bloodType, today: today)
     }
 }
 

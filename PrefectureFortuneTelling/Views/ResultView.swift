@@ -4,11 +4,13 @@
 //
 //  Created by 若生優希 on 2024/08/07.
 //
+import SwiftData
 import SwiftUI
 
 struct ResultView: View {
     @Binding var name: String
     @Binding var fortuneResponse: FortuneResponse?
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -50,6 +52,10 @@ struct ResultView: View {
                         )
                 }
                 .padding(.top, 10)
+
+                .onAppear {
+                    addResult(response: response)
+                }
             } else {
                 Text("データを取得できませんでした")
                     .font(.title2)
@@ -59,6 +65,16 @@ struct ResultView: View {
             Spacer()
         }
         .padding()
+    }
+
+    private func addResult(response: FortuneResponse) {
+        let newResult = FortuneResult(user: name, name: response.name)
+        modelContext.insert(newResult)
+        do {
+            try modelContext.save()
+        } catch {
+            print("Error saving data: \(error.localizedDescription)")
+        }
     }
 }
 
