@@ -9,9 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var name = ""
-    @State private var year = 2_000
-    @State private var month = 1
-    @State private var day = 1
+    @State private var birthday = Date()
     @State private var bloodType = ""
     @State private var fortuneResponse: FortuneResponse?
     @State private var isShowingResult = false
@@ -25,34 +23,28 @@ struct ContentView: View {
                         TextField("名前を入力してください", text: $name)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
-                    HStack {
-                        Text("誕生年:")
-                        TextField("誕生年を入力してください", value: $year, formatter: NumberFormatter())
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.numberPad)
-                    }
-                    HStack {
-                        Text("誕生月:")
-                        TextField("誕生月を入力してください", value: $month, formatter: NumberFormatter())
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.numberPad)
-                    }
-                    HStack {
+                    VStack(alignment: .leading) {
                         Text("誕生日:")
-                        TextField("誕生日を入力してください", value: $day, formatter: NumberFormatter())
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.numberPad)
+                        DatePicker("誕生日を選択してください", selection: $birthday, displayedComponents: [.date])
+                            .datePickerStyle(GraphicalDatePickerStyle())
+                            .labelsHidden()
                     }
                     HStack {
                         Text("血液型:")
-                        TextField("血液型を入力してください", text: $bloodType)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        Picker("血液型を選択してください", selection: $bloodType) {
+                            Text("A").tag("a")
+                            Text("B").tag("b")
+                            Text("AB").tag("ab")
+                            Text("O").tag("o")
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
                     }
                 }
                 .padding(.vertical, 5)
 
                 Button(action: {
-                    let birthday = YearMonthDay(year: year, month: month, day: day)
+                    let components = Calendar.current.dateComponents([.year, .month, .day], from: birthday)
+                    let birthday = YearMonthDay(year: components.year ?? 2_000, month: components.month ?? 1, day: components.day ?? 1)
                     let today = YearMonthDay(year: Calendar.current.component(.year, from: Date()),
                                              month: Calendar.current.component(.month, from: Date()),
                                              day: Calendar.current.component(.day, from: Date()))
@@ -78,20 +70,15 @@ struct ContentView: View {
                 }
                 .padding(.vertical)
 
-                NavigationLink(destination: ResultView(fortuneResponse: $fortuneResponse), isActive: $isShowingResult) {
-                    EmptyView()
-                }
-
                 Spacer()
             }
             .padding()
             .navigationTitle("相性の良い都道府県占い")
+            .navigationDestination(isPresented: $isShowingResult) {
+                ResultView(name: $name, fortuneResponse: $fortuneResponse)
+            }
         }
     }
-}
-
-#Preview {
-    ResultView(fortuneResponse: .constant(nil))
 }
 
 #Preview {

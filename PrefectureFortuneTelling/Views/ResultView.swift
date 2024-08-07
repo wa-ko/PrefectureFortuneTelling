@@ -7,13 +7,14 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Binding var name: String
     @Binding var fortuneResponse: FortuneResponse?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             if let response = fortuneResponse {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("あなたと相性のいい都道府県は…")
+                    Text("\(name)さんと相性のいい都道府県は…")
                     Text(response.name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -59,4 +60,8 @@ struct ResultView: View {
         }
         .padding()
     }
+}
+
+#Preview {
+    ResultView(name: .constant("test"), fortuneResponse: .constant(nil))
 }
