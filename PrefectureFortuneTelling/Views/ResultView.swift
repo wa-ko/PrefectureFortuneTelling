@@ -65,6 +65,7 @@ struct ResultView: View {
             Spacer()
         }
         .padding()
+
     }
 
     private func addResult(response: FortuneResponse) {

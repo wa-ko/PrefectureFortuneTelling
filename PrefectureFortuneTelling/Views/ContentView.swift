@@ -74,11 +74,8 @@ struct ContentView: View {
                     }
                 }) {
                     Text("占う")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(8)
                 }
+                .buttonStyle(MyButtonStyle())
                 .padding(.vertical)
                 .alert(
                     Text("入力エラー"),
