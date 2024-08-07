@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var bloodType = ""
     @State private var fortuneResponse: FortuneResponse?
     @State private var isShowingResult = false
+    @State private var isShowingAlert = false
+    @State private var alertMessage = ""
 
     var body: some View {
         NavigationStack {
@@ -45,20 +47,31 @@ struct ContentView: View {
                 Spacer()
 
                 Button(action: {
-                    let request = setComponents(birthday: birthday, bloodType: bloodType)
+                    if name.isEmpty && bloodType.isEmpty {
+                        alertMessage = "名前と血液型を入力してください"
+                        isShowingAlert = true
+                    } else if name.isEmpty {
+                        alertMessage = "名前を入力してください"
+                        isShowingAlert = true
+                    } else if bloodType.isEmpty {
+                        alertMessage = "血液型を選択してください"
+                        isShowingAlert = true
+                    } else {
 
-                    API().fetchFortune(request: request) { result in
-                        switch result {
-                        case .success(let response):
-                            DispatchQueue.main.async {
-                                self.fortuneResponse = response
-                                self.isShowingResult = true
+                        let request = setComponents(birthday: birthday, bloodType: bloodType)
+
+                        API().fetchFortune(request: request) { result in
+                            switch result {
+                            case .success(let response):
+                                DispatchQueue.main.async {
+                                    self.fortuneResponse = response
+                                    self.isShowingResult = true
+                                }
+                            case .failure(let error):
+                                print(error.localizedDescription)
                             }
-                        case .failure(let error):
-                            print(error.localizedDescription)
                         }
                     }
-
                 }) {
                     Text("占う")
                         .foregroundColor(.white)
@@ -67,6 +80,14 @@ struct ContentView: View {
                         .cornerRadius(8)
                 }
                 .padding(.vertical)
+                .alert(
+                    Text("入力エラー"),
+                    isPresented: $isShowingAlert
+                ) {
+                    Button("OK", role: .cancel) {}
+                } message: {
+                    Text(alertMessage)
+                }
 
                 Spacer()
 
