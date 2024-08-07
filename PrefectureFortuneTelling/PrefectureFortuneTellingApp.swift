@@ -11,7 +11,8 @@ import SwiftUI
 struct PrefectureFortuneTellingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
+                .modelContainer(for: FortuneResult.self)
         }
     }
 }
