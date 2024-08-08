@@ -37,3 +37,10 @@
 
 ### ダークモード対応
 - **ボタンをダークモードに対応させました。** 
+
+## 参考にした資料
+- 様々な企業様のiOS研修リポジトリ
+- Apple Developer Documentation
+- Zenn/Qiita/stackoverflowなどのWebサイト
+- Swift実践入門
+- ChatGPT
