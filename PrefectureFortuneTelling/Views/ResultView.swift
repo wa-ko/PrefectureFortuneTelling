@@ -16,7 +16,7 @@ struct ResultView: View {
         VStack(alignment: .leading, spacing: 20) {
             if let response = fortuneResponse {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("\(name)さんと相性のいい都道府県は…")
+                    Text("CompatibilityResult \(name)")
                     Text(response.name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -31,14 +31,14 @@ struct ResultView: View {
                         .frame(height: 150)
                     }
                 }
-                Text("県庁所在地: \(response.capital)")
+                Text("Capital \(response.capital)")
                     .font(.title2)
                     .padding(.top, 10)
                 if let citizenDay = response.citizenDay {
-                    Text("県民の日: \(citizenDay.month)/\(citizenDay.day)")
+                    Text("CitizenDay \(citizenDay.month)/\(citizenDay.day)")
                         .font(.title3)
                 }
-                Text("海岸線: \(response.hasCoastLine ? "あり" : "なし")")
+                Text("CoastLine \(response.hasCoastLine ? String(localized: "Available") : String(localized: "NotAvailable"))")
                     .font(.title3)
                 VStack {
                     Text(response.brief)
@@ -57,7 +57,7 @@ struct ResultView: View {
                     addResult(response: response)
                 }
             } else {
-                Text("データを取得できませんでした")
+                Text("DataFetchError")
                     .font(.title2)
                     .foregroundColor(.gray)
             }

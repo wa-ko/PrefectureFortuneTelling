@@ -14,7 +14,7 @@ struct StartView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                Text("あなたと相性のいい\n都道府県を占ってあげる！")
+                Text("CompatibilityTitle")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
@@ -23,14 +23,14 @@ struct StartView: View {
                 Button(action: {
                     isShowingContentView = true
                 }) {
-                    Text("スタート")
+                    Text("Start")
                 }
                 .buttonStyle(MyButtonStyle())
 
                 Button(action: {
                     isShowingPastResults = true
                 }) {
-                    Text("過去の占い結果を見る")
+                    Text("ViewPastResults")
                 }
                 .buttonStyle(MyButtonStyle())
             }
