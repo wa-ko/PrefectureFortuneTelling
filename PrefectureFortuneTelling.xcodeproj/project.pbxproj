@@ -11,6 +11,14 @@
 		5265EDE72C5F7CA600879508 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDE62C5F7CA600879508 /* ContentView.swift */; };
 		5265EDE92C5F7CA700879508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5265EDE82C5F7CA700879508 /* Assets.xcassets */; };
 		5265EDED2C5F7CA700879508 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5265EDEC2C5F7CA700879508 /* Preview Assets.xcassets */; };
+		5265EDF62C5FC8E400879508 /* FortuneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDF52C5FC8E400879508 /* FortuneRequest.swift */; };
+		5265EDF82C60537C00879508 /* FortuneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDF72C60537C00879508 /* FortuneResponse.swift */; };
+		5265EDFB2C60612C00879508 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDFA2C60612C00879508 /* API.swift */; };
+		52BB77412C62E91300E7F617 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77402C62E91300E7F617 /* ResultView.swift */; };
+		52BB77452C6399F500E7F617 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77442C6399F500E7F617 /* StartView.swift */; };
+		52BB77472C639F3100E7F617 /* PastResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77462C639F3100E7F617 /* PastResultsView.swift */; };
+		52BB77492C639FCB00E7F617 /* FortuneResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77482C639FCB00E7F617 /* FortuneResult.swift */; };
+		52D590B02C64365C008E44DA /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D590AF2C64365C008E44DA /* ButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		5265EDE82C5F7CA700879508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5265EDEA2C5F7CA700879508 /* PrefectureFortuneTelling.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrefectureFortuneTelling.entitlements; sourceTree = "<group>"; };
 		5265EDEC2C5F7CA700879508 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5265EDF52C5FC8E400879508 /* FortuneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneRequest.swift; sourceTree = "<group>"; };
+		5265EDF72C60537C00879508 /* FortuneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneResponse.swift; sourceTree = "<group>"; };
+		5265EDFA2C60612C00879508 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		52BB77402C62E91300E7F617 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		52BB77442C6399F500E7F617 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		52BB77462C639F3100E7F617 /* PastResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastResultsView.swift; sourceTree = "<group>"; };
+		52BB77482C639FCB00E7F617 /* FortuneResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneResult.swift; sourceTree = "<group>"; };
+		52D590AF2C64365C008E44DA /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				5265EDE42C5F7CA600879508 /* PrefectureFortuneTellingApp.swift */,
-				5265EDE62C5F7CA600879508 /* ContentView.swift */,
+				52BB773F2C627F6200E7F617 /* Views */,
+				5265EDF42C5FC7A000879508 /* Models */,
 				5265EDE82C5F7CA700879508 /* Assets.xcassets */,
 				5265EDEA2C5F7CA700879508 /* PrefectureFortuneTelling.entitlements */,
 				5265EDEB2C5F7CA700879508 /* Preview Content */,
@@ -69,6 +86,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5265EDF42C5FC7A000879508 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5265EDF52C5FC8E400879508 /* FortuneRequest.swift */,
+				5265EDF72C60537C00879508 /* FortuneResponse.swift */,
+				5265EDFA2C60612C00879508 /* API.swift */,
+				52BB77482C639FCB00E7F617 /* FortuneResult.swift */,
+				52D590AF2C64365C008E44DA /* ButtonStyle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52BB773F2C627F6200E7F617 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52BB77442C6399F500E7F617 /* StartView.swift */,
+				5265EDE62C5F7CA600879508 /* ContentView.swift */,
+				52BB77402C62E91300E7F617 /* ResultView.swift */,
+				52BB77462C639F3100E7F617 /* PastResultsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,6 +119,7 @@
 				5265EDDD2C5F7CA600879508 /* Sources */,
 				5265EDDE2C5F7CA600879508 /* Frameworks */,
 				5265EDDF2C5F7CA600879508 /* Resources */,
+				52BB773D2C626A3300E7F617 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -134,13 +175,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52BB773D2C626A3300E7F617 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n  swiftlint\n  swiftlint --fix --format\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5265EDDD2C5F7CA600879508 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5265EDF62C5FC8E400879508 /* FortuneRequest.swift in Sources */,
 				5265EDE72C5F7CA600879508 /* ContentView.swift in Sources */,
+				5265EDF82C60537C00879508 /* FortuneResponse.swift in Sources */,
+				52D590B02C64365C008E44DA /* ButtonStyle.swift in Sources */,
 				5265EDE52C5F7CA600879508 /* PrefectureFortuneTellingApp.swift in Sources */,
+				5265EDFB2C60612C00879508 /* API.swift in Sources */,
+				52BB77472C639F3100E7F617 /* PastResultsView.swift in Sources */,
+				52BB77412C62E91300E7F617 /* ResultView.swift in Sources */,
+				52BB77452C6399F500E7F617 /* StartView.swift in Sources */,
+				52BB77492C639FCB00E7F617 /* FortuneResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +343,7 @@
 				DEVELOPMENT_TEAM = 9ACM3MY2N2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -311,6 +382,7 @@
 				DEVELOPMENT_TEAM = 9ACM3MY2N2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
