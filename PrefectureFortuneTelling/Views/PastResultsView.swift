@@ -16,11 +16,11 @@ struct PastResultsView: View {
         List {
             ForEach(results) { result in
                 VStack(alignment: .leading) {
-                    Text("ユーザー: \(result.user)")
+                    Text("User \(result.user)")
                         .font(.headline)
-                    Text("占った結果: \(result.name)")
+                    Text("Result \(result.name)")
                         .font(.subheadline)
-                    Text("日付: \(result.date, formatter: dateFormatter)")
+                    Text("Date \(result.date, formatter: dateFormatter)")
                         .font(.footnote)
                         .foregroundColor(.gray)
                 }
@@ -28,7 +28,7 @@ struct PastResultsView: View {
             }
             .onDelete(perform: deleteResults)
         }
-        .navigationTitle("過去の占い結果")
+        .navigationTitle("PastResultsTitle")
     }
 
     private var dateFormatter: DateFormatter {

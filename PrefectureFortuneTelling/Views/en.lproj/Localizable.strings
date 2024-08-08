@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  PrefectureFortuneTelling
+
+  Created by 若生優希 on 2024/08/08.
+  
+*/
+
+/* StartView */
+"CompatibilityTitle" = "Find your compatible prefecture!";
+"Start" = "Start";
+"ViewPastResults" = "View Past Results";
+
+/* ContentView */
+"NamePrompt" = "Name:";
+"EnterName" = "Please enter your name";
+"BirthdayPrompt" = "Birthday:";
+"SelectBirthday" = "Select your birthday";
+"BloodTypePrompt" = "Blood Type:";
+"ChooseBloodType" = "Choose your blood type";
+"FortuneButton" = "Get your fortune";
+"NameInputError" = "Please enter your name";
+"BloodTypeInputError" = "Please select your blood type";
+"GeneralInputError" = "Please fill your name and blood type";
+"InputErrorAlert" = "Input Error";
+"OkButton" = "OK";
+"CompatibilityFortuneTelling" = "Compatibility Prefecture Fortune Telling";
+
+
+/* ResultView */
+"CompatibilityResult %@" = "%@'s compatible prefecture is...";
+"Capital %@" = "Capital: %@";
+"CitizenDay %@" = "Citizen's Day: %@";
+"CoastLine %@" = "Has Coast Line: %@";
+"Available" = "Available";
+"NotAvailable" = "Not Available";
+"DataFetchError" = "Failed to fetch data";
+
+/* PastResultsView */
+"PastResultsTitle" = "Past Fortune Results";
+"User %@" = "User: %@";
+"Result %@" = "Result: %@";
+"Date %@" = "Date: %@";

@@ -21,19 +21,19 @@ struct ContentView: View {
             VStack(alignment: .center) {
                 Group {
                     HStack {
-                        Text("名前:")
-                        TextField("名前を入力してください", text: $name)
+                        Text("NamePrompt")
+                        TextField("EnterName", text: $name)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     VStack(alignment: .leading) {
-                        Text("誕生日:")
-                        DatePicker("誕生日を選択してください", selection: $birthday, displayedComponents: [.date])
+                        Text("BirthdayPrompt")
+                        DatePicker("SelectBirthday", selection: $birthday, displayedComponents: [.date])
                             .datePickerStyle(GraphicalDatePickerStyle())
                             .labelsHidden()
                     }
                     HStack {
-                        Text("血液型:")
-                        Picker("血液型を選択してください", selection: $bloodType) {
+                        Text("BloodTypePrompt")
+                        Picker("ChooseBloodType", selection: $bloodType) {
                             Text("A").tag("a")
                             Text("B").tag("b")
                             Text("AB").tag("ab")
@@ -48,13 +48,13 @@ struct ContentView: View {
 
                 Button(action: {
                     if name.isEmpty && bloodType.isEmpty {
-                        alertMessage = "名前と血液型を入力してください"
+                        alertMessage = "GeneralInputError"
                         isShowingAlert = true
                     } else if name.isEmpty {
-                        alertMessage = "名前を入力してください"
+                        alertMessage = "NameInputError"
                         isShowingAlert = true
                     } else if bloodType.isEmpty {
-                        alertMessage = "血液型を選択してください"
+                        alertMessage = "BloodTypeInputError"
                         isShowingAlert = true
                     } else {
 
@@ -73,15 +73,15 @@ struct ContentView: View {
                         }
                     }
                 }) {
-                    Text("占う")
+                    Text("FortuneButton")
                 }
                 .buttonStyle(MyButtonStyle())
                 .padding(.vertical)
                 .alert(
-                    Text("入力エラー"),
+                    Text("InputErrorAlert"),
                     isPresented: $isShowingAlert
                 ) {
-                    Button("OK", role: .cancel) {}
+                    Button("OkButton", role: .cancel) {}
                 } message: {
                     Text(alertMessage)
                 }
@@ -90,7 +90,7 @@ struct ContentView: View {
 
             }
             .padding()
-            .navigationTitle("相性の良い都道府県占い")
+            .navigationTitle("CompatibilityFortuneTelling")
             .navigationDestination(isPresented: $isShowingResult) {
                 ResultView(name: $name, fortuneResponse: $fortuneResponse)
             }

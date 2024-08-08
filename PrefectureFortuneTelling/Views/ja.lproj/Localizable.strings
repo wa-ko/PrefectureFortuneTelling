@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  PrefectureFortuneTelling
+
+  Created by 若生優希 on 2024/08/08.
+  
+*/
+
+/* StartView */
+"CompatibilityTitle" = "あなたと相性のいい\n都道府県を占ってあげる！";
+"Start" = "スタート";
+"ViewPastResults" = "過去の占い結果を見る";
+
+/* ContentView */
+"NamePrompt" = "名前:";
+"EnterName" = "名前を入力してください";
+"BirthdayPrompt" = "誕生日:";
+"SelectBirthday" = "誕生日を選択してください";
+"BloodTypePrompt" = "血液型:";
+"ChooseBloodType" = "血液型を選択してください";
+"FortuneButton" = "占う";
+"NameInputError" = "名前を入力してください";
+"BloodTypeInputError" = "血液型を選択してください";
+"GeneralInputError" = "名前と血液型を入力してください";
+"InputErrorAlert" = "入力エラー";
+"OkButton" = "OK";
+"CompatibilityFortuneTelling" = "相性の良い都道府県占い";
+
+
+/* ResultView */
+"CompatibilityResult %@" = "%@さんと相性のいい都道府県は…";
+"Capital %@" = "県庁所在地: %@";
+"CitizenDay %@" = "県民の日: %@";
+"CoastLine %@" = "海岸線: %@";
+"Available" = "あり";
+"NotAvailable" = "なし";
+"DataFetchError" = "データの取得に失敗しました";
+
+
+/* PastResultsView */
+"PastResultsTitle" = "過去の占い結果";
+"User %@" = "ユーザー: %@";
+"Result %@" = "占った結果: %@";
+"Date %@" = "日付: %@";
