@@ -5,6 +5,7 @@
 //  Created by 若生優希 on 2024/08/07.
 //
 
+import Kingfisher
 import SwiftUI
 
 struct StartView: View {
@@ -19,6 +20,12 @@ struct StartView: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding()
+
+                KFImage(URL(string: "https://user0514.cdnw.net/shared/img/thumb/aig-ai230706090-xl_TP_V.jpg"))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.bottom, 20)
+                    .shadow(radius: 10)
 
                 Button(action: {
                     isShowingContentView = true
