@@ -7,7 +7,7 @@
 import SwiftData
 import SwiftUI
 
-struct ResultView: View {
+struct FortuneResponseView: View {
     @Binding var name: String
     @Binding var fortuneResponse: FortuneResponse?
     @Environment(\.modelContext) private var modelContext
@@ -80,5 +80,5 @@ struct ResultView: View {
 }
 
 #Preview {
-    ResultView(name: .constant("test"), fortuneResponse: .constant(nil))
+    FortuneResponseView(name: .constant("test"), fortuneResponse: .constant(nil))
 }

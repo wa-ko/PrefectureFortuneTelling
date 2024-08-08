@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5265EDE52C5F7CA600879508 /* PrefectureFortuneTellingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDE42C5F7CA600879508 /* PrefectureFortuneTellingApp.swift */; };
-		5265EDE72C5F7CA600879508 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDE62C5F7CA600879508 /* ContentView.swift */; };
+		5265EDE72C5F7CA600879508 /* FortuneRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDE62C5F7CA600879508 /* FortuneRequestView.swift */; };
 		5265EDE92C5F7CA700879508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5265EDE82C5F7CA700879508 /* Assets.xcassets */; };
 		5265EDED2C5F7CA700879508 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5265EDEC2C5F7CA700879508 /* Preview Assets.xcassets */; };
 		5265EDF62C5FC8E400879508 /* FortuneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDF52C5FC8E400879508 /* FortuneRequest.swift */; };
 		5265EDF82C60537C00879508 /* FortuneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDF72C60537C00879508 /* FortuneResponse.swift */; };
 		5265EDFB2C60612C00879508 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265EDFA2C60612C00879508 /* API.swift */; };
-		52BB77412C62E91300E7F617 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77402C62E91300E7F617 /* ResultView.swift */; };
+		52BB77412C62E91300E7F617 /* FortuneResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77402C62E91300E7F617 /* FortuneResponseView.swift */; };
 		52BB77452C6399F500E7F617 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77442C6399F500E7F617 /* StartView.swift */; };
 		52BB77472C639F3100E7F617 /* PastResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77462C639F3100E7F617 /* PastResultsView.swift */; };
 		52BB77492C639FCB00E7F617 /* FortuneResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB77482C639FCB00E7F617 /* FortuneResult.swift */; };
@@ -25,14 +25,14 @@
 /* Begin PBXFileReference section */
 		5265EDE12C5F7CA600879508 /* PrefectureFortuneTelling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrefectureFortuneTelling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5265EDE42C5F7CA600879508 /* PrefectureFortuneTellingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureFortuneTellingApp.swift; sourceTree = "<group>"; };
-		5265EDE62C5F7CA600879508 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5265EDE62C5F7CA600879508 /* FortuneRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneRequestView.swift; sourceTree = "<group>"; };
 		5265EDE82C5F7CA700879508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5265EDEA2C5F7CA700879508 /* PrefectureFortuneTelling.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrefectureFortuneTelling.entitlements; sourceTree = "<group>"; };
 		5265EDEC2C5F7CA700879508 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5265EDF52C5FC8E400879508 /* FortuneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneRequest.swift; sourceTree = "<group>"; };
 		5265EDF72C60537C00879508 /* FortuneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneResponse.swift; sourceTree = "<group>"; };
 		5265EDFA2C60612C00879508 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		52BB77402C62E91300E7F617 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		52BB77402C62E91300E7F617 /* FortuneResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneResponseView.swift; sourceTree = "<group>"; };
 		52BB77442C6399F500E7F617 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		52BB77462C639F3100E7F617 /* PastResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastResultsView.swift; sourceTree = "<group>"; };
 		52BB77482C639FCB00E7F617 /* FortuneResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneResult.swift; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				52BB77442C6399F500E7F617 /* StartView.swift */,
-				5265EDE62C5F7CA600879508 /* ContentView.swift */,
-				52BB77402C62E91300E7F617 /* ResultView.swift */,
+				5265EDE62C5F7CA600879508 /* FortuneRequestView.swift */,
+				52BB77402C62E91300E7F617 /* FortuneResponseView.swift */,
 				52BB77462C639F3100E7F617 /* PastResultsView.swift */,
 				52D590B12C64D0EB008E44DA /* Localizable.strings */,
 			);
@@ -208,13 +208,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5265EDF62C5FC8E400879508 /* FortuneRequest.swift in Sources */,
-				5265EDE72C5F7CA600879508 /* ContentView.swift in Sources */,
+				5265EDE72C5F7CA600879508 /* FortuneRequestView.swift in Sources */,
 				5265EDF82C60537C00879508 /* FortuneResponse.swift in Sources */,
 				52D590B02C64365C008E44DA /* ButtonStyle.swift in Sources */,
 				5265EDE52C5F7CA600879508 /* PrefectureFortuneTellingApp.swift in Sources */,
 				5265EDFB2C60612C00879508 /* API.swift in Sources */,
 				52BB77472C639F3100E7F617 /* PastResultsView.swift in Sources */,
-				52BB77412C62E91300E7F617 /* ResultView.swift in Sources */,
+				52BB77412C62E91300E7F617 /* FortuneResponseView.swift in Sources */,
 				52BB77452C6399F500E7F617 /* StartView.swift in Sources */,
 				52BB77492C639FCB00E7F617 /* FortuneResult.swift in Sources */,
 			);

@@ -35,7 +35,7 @@ struct StartView: View {
                 .buttonStyle(MyButtonStyle())
             }
             .navigationDestination(isPresented: $isShowingContentView) {
-                ContentView()
+                FortuneRequestView()
             }
             .navigationDestination(isPresented: $isShowingPastResults) {
                 PastResultsView()

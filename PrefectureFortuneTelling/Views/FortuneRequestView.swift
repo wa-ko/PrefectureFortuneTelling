@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FortuneRequestView: View {
     @State private var name = ""
     @State private var birthday = Date()
     @State private var bloodType = ""
@@ -92,7 +92,7 @@ struct ContentView: View {
             .padding()
             .navigationTitle("CompatibilityFortuneTelling")
             .navigationDestination(isPresented: $isShowingResult) {
-                ResultView(name: $name, fortuneResponse: $fortuneResponse)
+                FortuneResponseView(name: $name, fortuneResponse: $fortuneResponse)
             }
         }
     }
@@ -108,5 +108,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    FortuneRequestView()
 }
